@@ -15,7 +15,6 @@ const Layout = () => {
   // Func
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("object");
     const newTodo = {
       id: new Date().getMilliseconds(),
       title: e.target.taskName.value,
@@ -24,12 +23,23 @@ const Layout = () => {
     };
     setData([...data, newTodo]);
   };
+
   // Delete Func
   const handleRemove = (id) => {
     setData(data.filter((todo) => todo.id !== id));
   };
-  //Func Section is Done
 
+  // Complated Func
+  const handleComplated = (id) => {
+    const updatedData = data.map((todo) => {
+      if (todo.id === id) {
+        return { ...todo, complated: !todo.complated };
+      }
+      return todo;
+    });
+    setData(updatedData);
+  };
+  // Func Section is Done
   return (
     <div className="mt-[2.5rem] w-[40rem] bg-pink-500 pb-10">
       <Header active={isActive} setActive={setIsActive} />
@@ -42,7 +52,11 @@ const Layout = () => {
         <div className="max-h-[25rem] overflow-y-auto">
           {data.map((item, idx) => (
             <div key={idx}>
-              <Task data={item} handleRemove={handleRemove} />
+              <Task
+                data={item}
+                handleRemove={handleRemove}
+                handleComplated={handleComplated}
+              />
             </div>
           ))}
         </div>

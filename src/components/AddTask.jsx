@@ -36,7 +36,7 @@ const AddTask = ({ handleSubmit }) => {
             <option value="Dec 12th at 2.30PM">Dec 12th at 2.30PM</option>
           </select>
         </div>
-        <button className="bg-red-800 py-2 rounded text-white w-full">
+        <button className="bg-yellow-700 py-2 rounded text-white w-full">
           Save Task
         </button>
       </div>

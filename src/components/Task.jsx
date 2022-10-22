@@ -9,11 +9,15 @@ const Task = ({ data, handleRemove, handleComplated }) => {
           className="w-full cursor-pointer"
           onClick={() => handleComplated(data.id)}
         >
-          <p className={`font-bold text-xl`}>{data.title}</p>
+          <p
+            className={`${data.complated && "line-through "} font-bold text-xl`}
+          >
+            {data.title}
+          </p>
           <p className={`${data.complated && "line-through"}`}>{data.date}</p>
         </div>
         <div
-          className="text-xl text-red-800 cursor-pointer p-2 bg-slate-200 rounded-full"
+          className="text-xl text-yellow-700 cursor-pointer p-2 bg-slate-200 rounded-full"
           onClick={() => handleRemove(data.id)}
         >
           <AiOutlineClose />

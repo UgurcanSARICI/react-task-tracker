@@ -41,7 +41,7 @@ const Layout = () => {
   };
   // Func Section is Done
   return (
-    <div className="mt-[2.5rem] w-[40rem] bg-pink-500 pb-10">
+    <div className="mt-[2.5rem] w-[40rem] bg-emerald-700 pb-10">
       <Header active={isActive} setActive={setIsActive} />
       {isActive && (
         <div className="w-[30rem] mx-auto">

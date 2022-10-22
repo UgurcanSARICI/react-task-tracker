@@ -13,11 +13,11 @@
 
 
 ## The challenge
-Project aims to create a Random User  App with React.
+Project aims to create a Task Tracker App with React and Tailwindcss.
 
 ## Problem Statement
 
-- Develop a random user application using https://randomuser.me/api/. Use one button to bring in a new user and another button to add a user to the list
+- Develop a task tracking app where you can enter a new task, strikethrough and delete completed tasks
 <hr>
 
 
